@@ -11,7 +11,7 @@ $('#employeeListPage').bind('pageinit', function(event) {
 function getEmployeeList() {
 
 	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
-	$.getJSON(serviceURL + 'getemployees.php', function(data) {
+	$.getJSON(serviceURL + 'getemployees.php', null, function(data) {
 	    alert("inside Json"+data.items);
 		//$('#employeeList li').remove();
 		employees = data.items;
