@@ -19,6 +19,7 @@
     function gotFS(fileSystem) {
 		alert(fileSystem.name);
 		alert(fileSystem.root.name);
+		alert(fileSystem.root.fullPath);
         fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
     }
 
