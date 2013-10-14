@@ -3,7 +3,7 @@
   <head>
     <title>FileWriter Example</title>
 
-    <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
 
     // Wait for PhoneGap to load
@@ -17,6 +17,8 @@
     }
 
     function gotFS(fileSystem) {
+		alert(fileSystem.name);
+		alert(fileSystem.root.name);
         fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
     }
 
