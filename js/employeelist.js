@@ -10,7 +10,7 @@ $('#employeeListPage').bind('pageinit', function(event) {
 
 function getEmployeeList() {
 
-	alert("inside getEmployeeList");
+	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
 	$.getJSON(serviceURL + 'getemployees.php', function(data) {
 	    alert("inside Json");
 		$('#employeeList li').remove();
