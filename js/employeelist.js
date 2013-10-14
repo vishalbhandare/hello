@@ -2,9 +2,11 @@ var serviceURL = "http://vishalb.in/directory/services/";
 
 var employees;
 
+/*
 $('#employeeListPage').bind('pageinit', function(event) {
 	getEmployeeList();
 });
+*/
 
 function getEmployeeList() {
 	$.getJSON(serviceURL + 'getemployees.php', function(data) {
