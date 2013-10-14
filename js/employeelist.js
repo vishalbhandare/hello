@@ -27,15 +27,15 @@ function getEmployeeList() {
 		$('#employeeList').listview('refresh');
 	});
 	*/
-	$.ajax({
+	var request = $.ajax({
 	  type: "POST",
 	  url: serviceURL + 'getemployees.php',
 	  data: { name: "John", location: "Boston" }
 	})
-  .done(function( msg ) {
+  request.done(function( msg ) {
     alert( "Data Saved: " + msg );
   });
-  .fail(function( jqXHR, textStatus ) {
+ request.fail(function( jqXHR, textStatus ) {
 	  alert( "Request failed: " + textStatus );
 	});
 }
