@@ -37,8 +37,8 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-    
-		getEmployeeList();
+		alert("dfgdfgdfg")
+		//getEmployeeList();
 		
         console.log('Received Event: ' + id);
     }
