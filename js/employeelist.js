@@ -29,7 +29,6 @@ function getEmployeeList() {
 	*/
 	var request = $.ajax({
 	  type: "POST",
-	  dataType: 'json',
 	  url: serviceURL + 'getemployees.php',
 	  data: { name: "John", location: "Boston" }
 	})
