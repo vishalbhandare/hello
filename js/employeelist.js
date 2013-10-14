@@ -11,7 +11,7 @@ $('#employeeListPage').bind('pageinit', function(event) {
 function getEmployeeList() {
 
 	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
-	/*
+
 	$.getJSON(serviceURL + 'getemployees.php', null, function(data) {
 	    alert("inside Json"+data.items);
 		//$('#employeeList li').remove();
@@ -26,7 +26,7 @@ function getEmployeeList() {
 		});
 		$('#employeeList').listview('refresh');
 	});
-	*/
+	/*
 	var request = $.ajax({
 	  type: "POST",
 	  cache: false,
@@ -38,5 +38,5 @@ function getEmployeeList() {
   });
  request.fail(function( jqXHR, textStatus ) {
 	  alert( "Request failed: " + textStatus );
-	});
+	});	*/
 }
