@@ -11,6 +11,7 @@ $('#employeeListPage').bind('pageinit', function(event) {
 function getEmployeeList() {
 
 	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
+	/*
 	$.getJSON(serviceURL + 'getemployees.php', null, function(data) {
 	    alert("inside Json"+data.items);
 		//$('#employeeList li').remove();
@@ -25,4 +26,14 @@ function getEmployeeList() {
 		});
 		$('#employeeList').listview('refresh');
 	});
+	*/
+	$.ajax({
+	  type: "POST",
+	  url: serviceURL + 'getemployees.php',
+	  data: { name: "John", location: "Boston" }
+	})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+  
 }
