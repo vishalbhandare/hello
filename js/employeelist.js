@@ -10,14 +10,14 @@ $('#employeeListPage').bind('pageinit', function(event) {
 
 function getEmployeeList() {
 
-	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
+	//alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
 
 	$.getJSON(serviceURL + 'getemployees.php',  function(data) {
-	    alert("inside Json"+data.items);
-		//$('#employeeList li').remove();
+	    //alert("inside Json"+data.items);
+		$('#employeeList li').remove();
 		employees = data.items;
 		$.each(employees, function(index, employee) {
-				    alert("inside Json"+employee.firstName);
+			//	    alert("inside Json"+employee.firstName);
 			$('#employeeList').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
 					'<img src="http://vishalb.in/directory/pics/' + employee.picture + '"/>' +
 					'<h4>' + employee.firstName + ' ' + employee.lastName + '</h4>' +
