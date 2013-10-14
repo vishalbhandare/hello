@@ -12,8 +12,8 @@ function getEmployeeList() {
 
 	alert("inside getEmployeeList "+serviceURL + 'getemployees.php');
 	$.getJSON(serviceURL + 'getemployees.php', function(data) {
-	    alert("inside Json");
-		$('#employeeList li').remove();
+	    alert("inside Json"+data);
+		//$('#employeeList li').remove();
 		employees = data.items;
 		$.each(employees, function(index, employee) {
 				    alert("inside Json"+employee.firstName);
