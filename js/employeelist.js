@@ -35,5 +35,7 @@ function getEmployeeList() {
   .done(function( msg ) {
     alert( "Data Saved: " + msg );
   });
-  
+  .fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
 }
