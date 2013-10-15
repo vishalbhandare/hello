@@ -63,6 +63,9 @@
     // A button will call this function
     //
     function capturePhoto() {
+	  alert("dfgdfg");
+	  alert(navigator.camera.DestinationType.DATA_URL);
+	  
       // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
         destinationType: navigator.camera.DestinationType.DATA_URL });
