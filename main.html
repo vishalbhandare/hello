@@ -27,6 +27,7 @@
 
         function uploadPhoto(imageURI) {
             var options = new FileUploadOptions();
+			options.chunkedMode = false;
             options.fileKey="file";
             options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
             options.mimeType="image/jpeg";
